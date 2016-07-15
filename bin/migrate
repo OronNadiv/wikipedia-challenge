@@ -1,0 +1,16 @@
+#!/bin/bash
+
+MIGRATIONS_DIR=$PWD/bin/migrate.js
+
+if test $1 = "up"
+then
+  ./node_modules/.bin/knex migrate:latest --debug --knexfile $MIGRATIONS_DIR
+elif test $1 = "down"
+then
+  ./node_modules/.bin/knex migrate:rollback --debug --knexfile $MIGRATIONS_DIR
+elif test $1 = "make"
+then
+  ./node_modules/.bin/knex migrate:make --debug --knexfile $MIGRATIONS_DIR $2
+else
+  echo "invalid migration command"
+fi
