@@ -1,7 +1,7 @@
 #Wikipedia Challenge - Find the shortest path between two Wikipedia pages
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 [![Dependencies][dependencies-image]][dependencies-url]
+[![JavaScript Style Guide][standard-image]][standard-url]  
 
 This application is inspired by [Ran Levi][ran-levi]'s Wikipedia challenge in his famous podcast, [Curious Minds][cmpod], in which Ran asks the listeners to find the shortest path between two Wikipedia pages.
 
@@ -64,3 +64,5 @@ Example:
 [node-js]: https://nodejs.org/en/
 [postgres]: https://www.postgresql.org/
 [rmq]: https://www.rabbitmq.com/
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[standard-url]: http://standardjs.com
