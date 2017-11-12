@@ -1,4 +1,4 @@
-const configuration = require('../db/knex-config')
+const configuration = require('../src/db/knex-config')
 
 module.exports = {
   development: configuration,

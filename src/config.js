@@ -1,5 +1,5 @@
 module.exports = {
-  postgres: process.env.DATABASE_URL || 'postgres://postgres:@localhost/wiki_temp',
+  postgres: process.env.DATABASE_URL || 'postgres://postgres:12345@localhost/wiki_temp',
   postgresPool: {
     min: parseInt(process.env.POSTGRESPOOLMIN || 2, 10),
     max: parseInt(process.env.POSTGRESPOOLMAX || 10, 10),

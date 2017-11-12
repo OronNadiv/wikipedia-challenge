@@ -76,7 +76,7 @@ class DocDownloader {
                       return amqp.sendToQueue({queue: 'wiki-challenge.download.pending'}, newUriModel.toJSON())
                     })
                 case 200:
-                  const filepath = path.join(__dirname, 'temp', uuid.v4())
+                  const filepath = path.join(__dirname, '../temp', uuid.v4())
                   verbose('filepath:', filepath)
                   return Promise
                     .resolve(fs.writeFile(filepath, body))
