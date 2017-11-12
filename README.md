@@ -1,6 +1,7 @@
 #Wikipedia Challenge - Find the shortest path between two Wikipedia pages
 
 [![Dependencies][dependencies-image]][dependencies-url]
+[![devDependencies][devdependencies-image]][devdependencies-url]
 [![JavaScript Style Guide][standard-image]][standard-url]  
 
 This application is inspired by [Ran Levi][ran-levi]'s Wikipedia challenge in his famous podcast, [Curious Minds][cmpod], in which Ran asks the listeners to find the shortest path between two Wikipedia pages.
@@ -57,12 +58,17 @@ Example:
 ### License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[dependencies-image]: https://img.shields.io/david/OronNadiv/wikipedia-challenge.svg?style=flat-square
+[dependencies-image]: https://david-dm.org/OronNadiv/wikipedia-challenge/status.svg?style=flat-square
+[devdependencies-image]: https://david-dm.org/OronNadiv/wikipedia-challenge/dev-status.svg?style=flat-square
+
 [dependencies-url]: https://david-dm.org/OronNadiv/wikipedia-challenge
+[devdependencies-url]: https://david-dm.org/OronNadiv/wikipedia-challenge?type=dev
+
 [ran-levi]: http://www.ranlevi.com/
 [cmpod]: http://www.cmpod.net/
 [node-js]: https://nodejs.org/en/
 [postgres]: https://www.postgresql.org/
 [rmq]: https://www.rabbitmq.com/
+
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]: http://standardjs.com

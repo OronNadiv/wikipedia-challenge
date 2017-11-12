@@ -23,36 +23,41 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^6",
-    "npm": "^3"
+    "node": "^8",
+    "npm": "^5"
   },
   "scripts": {
     "downloader": "node downloader",
     "finder": "node finder",
     "install": "mkdir -p temp ",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
     "migrate": "bin/migrate",
     "processor": "node processor"
   },
   "devDependencies": {
-    "eslint": "^3",
-    "eslint-config-standard": "^5",
-    "eslint-plugin-promise": "^2",
-    "eslint-plugin-standard": "^2"
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "dependencies": {
-    "amqplib-easy": "^4",
-    "bfs-as-promised": "^1",
-    "bluebird": "^3",
-    "bookshelf": "^0.10",
-    "fs-promise": "^0.5",
-    "http-as-promised": "^1",
-    "knex": "^0.11",
-    "linkscrape": "^1",
-    "moment": "^2",
-    "node-uuid": "^1",
-    "pg": "^6",
-    "underscore": "1",
-    "winston": "^2"
+    "amqplib-easy": "^5.0.0",
+    "bfs-as-promised": "^1.0.4",
+    "bluebird": "^3.5.1",
+    "bookshelf": "^0.10.4",
+    "debug": "^3.1.0",
+    "diehard": "^1.5.2",
+    "fs-promise": "^2.0.3",
+    "http-as-promised": "^1.1.0",
+    "knex": "^0.13.0",
+    "linkscrape": "^1.0.0",
+    "moment": "^2.19.2",
+    "node-uuid": "^1.4.8",
+    "pg": "^7.4.0",
+    "underscore": "^1.8.3",
+    "winston": "^2.4.0"
   }
 }

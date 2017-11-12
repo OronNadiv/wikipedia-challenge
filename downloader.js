@@ -10,7 +10,7 @@ const Downloader = require('./doc-downloader')
 const Uri = require('./db/models/uri')
 const Promise = require('bluebird')
 
-amqp.consume({queue: 'wiki-challenge.download.pending'},
+amqp.consume({queue: 'wiki-challenge.download.pending', exchange: 'wikipedia-challenge'},
   ({json}) => {
     verbose('processing queue item.', json)
     const downloader = new Downloader(new Uri(json))

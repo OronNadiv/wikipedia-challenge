@@ -1,9 +1,20 @@
-const bookshelf = require('bookshelf')
+const diehard = require('diehard')
 const knex = require('knex')
-const knexConfig = require('./knex-config')
+const bookshelf = require('bookshelf')
+const knexConfiguration = require('./knex-config')
 
-const ORM = bookshelf(knex(knexConfig))
+const verbose = require('debug')('ha:db:bookshelf:verbose')
 
-ORM.plugin('pagination')
+const repository = bookshelf(knex(knexConfiguration))
 
-module.exports = ORM
+repository.plugin('visibility')
+
+diehard.register(done => {
+  verbose('Shutting down postgres connection.')
+  repository.knex.destroy(() => {
+    verbose('Postgres connection shutdown successfully.')
+    done()
+  })
+})
+
+module.exports = repository

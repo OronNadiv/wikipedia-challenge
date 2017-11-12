@@ -3,16 +3,10 @@ const config = require('../config')
 
 module.exports = {
   // debug: true,
-
   client: 'pg',
   connection: config.postgres,
-
-  pool: {
-    min: 1,
-    max: 10
-  },
-
+  pool: config.postgresPool,
   migrations: {
-    directory: path.join(__dirname, 'migrations')
+    directory: path.join(__dirname, '/migrations')
   }
 }

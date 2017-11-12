@@ -11,7 +11,7 @@ const Processor = require('./doc-processor')
 
 Promise
   .try(Processor.loadCaches)
-  .then(() => amqp.consume({queue: 'wiki-challenge.process.pending'},
+  .then(() => amqp.consume({queue: 'wiki-challenge.process.pending', exchange: 'wikipedia-challenge'},
     ({json}) => {
       verbose('processing queue item.', json)
       const processor = new Processor(
@@ -21,6 +21,5 @@ Promise
       )
       return processor.execute()
     }
-    )
-  )
+  ))
   .then(() => info('Processor is running.'))
