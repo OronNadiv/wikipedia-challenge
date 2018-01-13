@@ -2,3 +2,4 @@
 node_modules
 src/temp
 **/*.log
+package-lock.json
