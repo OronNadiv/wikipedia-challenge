@@ -36,7 +36,7 @@
     "processor": "node src/processor"
   },
   "devDependencies": {
-    "eslint": "^4.15.0",
+    "eslint": "^4.18.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
@@ -52,7 +52,7 @@
     "diehard": "^1.5.2",
     "fs-promise": "^2.0.3",
     "http-as-promised": "^2.0.1",
-    "knex": "^0.14.2",
+    "knex": "^0.14.3",
     "linkscrape": "^1.0.0",
     "moment": "^2.20.1",
     "node-uuid": "^1.4.8",
